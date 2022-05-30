@@ -2,7 +2,6 @@
 clc;
 close all;
 clear;
-
 fileid = fopen("RamanData_file.txt",'w+');
 % % fprintf(fileid, "voltage, HWFM, x_PEAK,y_PEAK,CONSTANT\n");
 fprintf(fileid, "DATA FOR THE RAMAN 2D_peak \t\t\t\t\t\t\t\t\t\t");
@@ -15,20 +14,22 @@ fclose(fileid);
 %  filenamelist = {"20220523_012_Mod2_2_PC2_3mm_hole_focus_graphene_532nm_ND0.3_grating600_20x_arbpol_mono582_pin100_60s_+0.50V","20220523_013_Mod2_2_PC2_3mm_hole_focus_graphene_532nm_ND0.3_grating600_20x_arbpol_mono582_pin100_60s_+0.45V","20220523_014_Mod2_2_PC2_3mm_hole_focus_graphene_532nm_ND0.3_grating600_20x_arbpol_mono582_pin100_60s_+0.40V","20220523_015_Mod2_2_PC2_3mm_hole_focus_graphene_532nm_ND0.3_grating600_20x_arbpol_mono582_pin100_60s_+0.35V","20220523_016_Mod2_2_PC2_3mm_hole_focus_graphene_532nm_ND0.3_grating600_20x_arbpol_mono582_pin100_60s_+0.30V","20220523_017_Mod2_2_PC2_3mm_hole_focus_graphene_532nm_ND0.3_grating600_20x_arbpol_mono582_pin100_60s_+0.25V","20220523_018_Mod2_2_PC2_3mm_hole_focus_graphene_532nm_ND0.3_grating600_20x_arbpol_mono582_pin100_60s_+0.20V","20220523_019_Mod2_2_PC2_3mm_hole_focus_graphene_532nm_ND0.3_grating600_20x_arbpol_mono582_pin100_60s_+0.15V","20220523_020_Mod2_2_PC2_3mm_hole_focus_graphene_532nm_ND0.3_grating600_20x_arbpol_mono582_pin100_60s_+0.11V","20220523_021_Mod2_2_PC2_3mm_hole_focus_graphene_532nm_ND0.3_grating600_20x_arbpol_mono582_pin100_60s_+0.05V","20220523_022_Mod2_2_PC2_3mm_hole_focus_graphene_532nm_ND0.3_grating600_20x_arbpol_mono582_pin100_60s_+0.00V","20220523_024_Mod2_2_PC2_3mm_hole_focus_graphene_532nm_ND0.3_grating600_20x_arbpol_mono582_pin100_60s_-0.05V","20220523_025_Mod2_2_PC2_3mm_hole_focus_graphene_532nm_ND0.3_grating600_20x_arbpol_mono582_pin100_60s_-0.10V","20220523_026_Mod2_2_PC2_3mm_hole_focus_graphene_532nm_ND0.3_grating600_20x_arbpol_mono582_pin100_60s_-0.15V","20220523_027_Mod2_2_PC2_3mm_hole_focus_graphene_532nm_ND0.3_grating600_20x_arbpol_mono582_pin100_60s_-0.20V","20220523_028_Mod2_2_PC2_3mm_hole_focus_graphene_532nm_ND0.3_grating600_20x_arbpol_mono582_pin100_60s_-0.25V","20220523_029_Mod2_2_PC2_3mm_hole_focus_graphene_532nm_ND0.3_grating600_20x_arbpol_mono582_pin100_60s_-0.30V","20220523_030_Mod2_2_PC2_3mm_hole_focus_graphene_532nm_ND0.3_grating600_20x_arbpol_mono582_pin100_60s_-0.35V","20220523_031_Mod2_2_PC2_3mm_hole_focus_graphene_532nm_ND0.3_grating600_20x_arbpol_mono582_pin100_60s_-0.40V","20220523_032_Mod2_2_PC2_3mm_hole_focus_graphene_532nm_ND0.3_grating600_20x_arbpol_mono582_pin100_60s_-0.45V", "20220523_033_Mod2_2_PC2_3mm_hole_focus_graphene_532nm_ND0.3_grating600_20x_arbpol_mono582_pin100_60s_-0.50V"};
 %  filenamelist = ["20220523_012_Mod2_2_PC2_3mm_hole_focus_graphene_532nm_ND0.3_grating600_20x_arbpol_mono582_pin100_60s_+0.50V","20220523_013_Mod2_2_PC2_3mm_hole_focus_graphene_532nm_ND0.3_grating600_20x_arbpol_mono582_pin100_60s_+0.45V","20220523_014_Mod2_2_PC2_3mm_hole_focus_graphene_532nm_ND0.3_grating600_20x_arbpol_mono582_pin100_60s_+0.40V","20220523_015_Mod2_2_PC2_3mm_hole_focus_graphene_532nm_ND0.3_grating600_20x_arbpol_mono582_pin100_60s_+0.35V","20220523_016_Mod2_2_PC2_3mm_hole_focus_graphene_532nm_ND0.3_grating600_20x_arbpol_mono582_pin100_60s_+0.30V","20220523_017_Mod2_2_PC2_3mm_hole_focus_graphene_532nm_ND0.3_grating600_20x_arbpol_mono582_pin100_60s_+0.25V","20220523_018_Mod2_2_PC2_3mm_hole_focus_graphene_532nm_ND0.3_grating600_20x_arbpol_mono582_pin100_60s_+0.20V","20220523_019_Mod2_2_PC2_3mm_hole_focus_graphene_532nm_ND0.3_grating600_20x_arbpol_mono582_pin100_60s_+0.15V","20220523_020_Mod2_2_PC2_3mm_hole_focus_graphene_532nm_ND0.3_grating600_20x_arbpol_mono582_pin100_60s_+0.11V","20220523_021_Mod2_2_PC2_3mm_hole_focus_graphene_532nm_ND0.3_grating600_20x_arbpol_mono582_pin100_60s_+0.05V","20220523_022_Mod2_2_PC2_3mm_hole_focus_graphene_532nm_ND0.3_grating600_20x_arbpol_mono582_pin100_60s_+0.00V","20220523_024_Mod2_2_PC2_3mm_hole_focus_graphene_532nm_ND0.3_grating600_20x_arbpol_mono582_pin100_60s_-0.05V","20220523_025_Mod2_2_PC2_3mm_hole_focus_graphene_532nm_ND0.3_grating600_20x_arbpol_mono582_pin100_60s_-0.10V","20220523_026_Mod2_2_PC2_3mm_hole_focus_graphene_532nm_ND0.3_grating600_20x_arbpol_mono582_pin100_60s_-0.15V","20220523_027_Mod2_2_PC2_3mm_hole_focus_graphene_532nm_ND0.3_grating600_20x_arbpol_mono582_pin100_60s_-0.20V","20220523_028_Mod2_2_PC2_3mm_hole_focus_graphene_532nm_ND0.3_grating600_20x_arbpol_mono582_pin100_60s_-0.25V","20220523_029_Mod2_2_PC2_3mm_hole_focus_graphene_532nm_ND0.3_grating600_20x_arbpol_mono582_pin100_60s_-0.30V","20220523_030_Mod2_2_PC2_3mm_hole_focus_graphene_532nm_ND0.3_grating600_20x_arbpol_mono582_pin100_60s_-0.35V","20220523_031_Mod2_2_PC2_3mm_hole_focus_graphene_532nm_ND0.3_grating600_20x_arbpol_mono582_pin100_60s_-0.40V","20220523_032_Mod2_2_PC2_3mm_hole_focus_graphene_532nm_ND0.3_grating600_20x_arbpol_mono582_pin100_60s_-0.45V", "20220523_033_Mod2_2_PC2_3mm_hole_focus_graphene_532nm_ND0.3_grating600_20x_arbpol_mono582_pin100_60s_-0.50V"];
 %% here start your for loops
+n=1;
 for i_file=1:21
 %20 is the number of files
 % fileid = ['20220523_0',num2str(read_sequence),'_Mod2_2_PC2_3mm_hole_focus_graphene_532nm_ND0.3_grating600_20x_arbpol_mono582_pin100_60s_+0.50V']
 read_sequence = i_file+11;
-
 fprintf("hi guys I am reading the file number  and file name = %.1f   %.1f\n ",i_file,read_sequence);
-
+Vn = 0.50 - (n-1)*0.05 ;  % data according to Voltage variation and corressponding files.
+n=n+1;
 if read_sequence == 23
+fprintf("Hi! DELIBERATELY skipping loop number: = %.1f  and file name: %.1f\n ",i_file,read_sequence);
     continue;
 end
 fileid = ['0',num2str(read_sequence),'.txt'];
 
 %try thsis way 
-% % 
+%%
 %  C={'a.dat', 'b.dat', 'c.dat',...};
 %  for i = 1:n
 %      fid(i) = fopen(C{i},'rt')
@@ -36,7 +37,7 @@ fileid = ['0',num2str(read_sequence),'.txt'];
 read_data1 = dlmread(fileid);
 figure
 plot(read_data1(:,1),read_data1(:,2));
-plot_datafile = i;
+plot_datafile = i_file;
 axis tight;
 title("Raman Raw Data Plot ", plot_datafile);
 [row,col] = size(read_data1);
@@ -61,7 +62,7 @@ fprintf("index_GpeakMin = %.2f   \t  %.2f  \n", index_Gpeakmin, read_data1(index
 fprintf("index_GpeakMax = %.2f   \t  %.2f  \n", index_GpeakMax, read_data1(index_Gpeakmin));
 
 Data_Gpeak = read_data1(index_Gpeakmin:index_GpeakMax,1:2);     % data for the Gpeak
-
+Gpeak_plotallVol(Data_Gpeak(:,1),Data_Gpeak(:,2),i_file);  % this is for multiple data plot on the same figure FUNCTION defined in the different file. 
 
 for i=1:row
     if (read_data1(i,1)>=2640)
@@ -160,15 +161,13 @@ for i=1:2
         end
     end
 
-    %     fprintf(" MANUALLY xpeak value of x and y  = %.2f  %.2f\n", xpeakLMan, (yfit(xpeakLMan)-PARAMS(3)));
+    % fprintf(" MANUALLY xpeak value of x and y  = %.2f  %.2f\n", xpeakLMan, (yfit(xpeakLMan)-PARAMS(3)));
     fprintf(" Automatically  xpeak value of x and y = %.2f  %.2f\n", x_peakL, y_peakL);
 
     %% data is written in the file
 
     fileid = fopen("RamanData_file.txt",'a');
     fprintf(fileid, "%.2f    %.2f    %.2f    %.2f\t\t\t\t\t\t\t\t",FWHM , x_peakL, Ypeak , c);
-%    fprintf(fileid,"\n");
-%     fclose(fileid);
 
     %% plotting the Peak and FWHM OF EACH 2D AND G PEAK
     figure
@@ -180,12 +179,12 @@ for i=1:2
     plot(xydata(:,1),Y_FWHM,'-m.');
     hold on
     plot(x_peakL_vect, yfit,'-g.');
-    axis tight;
+    axis tight
     switch(i)
         case 1
-            title(" Lorentz Fit Data for 2D PEAK", plot_datafile);
+            title('Lorentz Fit Data for 2D PEAK',num2str(Vn),'' );
         case 2
-            title(" Lorentz Fit Data for G PEAK " , plot_datafile);
+            title(" Lorentz Fit Data for G PEAK " ,num2str(Vn),'');
 
     end
 end
@@ -194,30 +193,45 @@ fprintf(fileid,"\n");  % this  for the Ramana final conclusion data  in each loo
 fprintf("\n")
 
 %% here end for loop
-fprintf("\n");
+fprintf("*************************************\n");
 fprintf("hi BUDDY: OPERATION FOR THE FILE NUMBER AND FILE NAME IS  = %.1f   %.1f\t completed\n ",i_file,read_sequence);
+%n = n+1;
 end
 % after for loop completed
 fclose(fileid);
 
 %% final conclusion data plot
 FinalData = readmatrix('RamanData_file.txt');
+
 Voltage = 0.50:-0.05:-0.50;
 Voltage = Voltage';
+
+for i=1:2  
+
+   if i == 2
+		i=i+3;
+   end
+    v_title = ['2D PEAK FWHM' , '2D PEAK x_peakL', '2D PEAK Ypeak' , 'c' ,'G PEAK FWHM' , 'G PEAK x_peakL', 'G PEAK Ypeak' , 'G PEAK c'];
+ 
   figure
-    plot(Voltage(1:end-1,1), FinalData(:,1),'-bo');
-%     hold on
-  figure
-    plot(Voltage(1:end-1,1), FinalData(:,2));
-    % axis tight;
-%     hold on
-  figure
-    plot(Voltage(1:end-1,1),FinalData(:,3),'-m.');
-%     hold on
-%     plot(Voltage(1:end-1,1), FinalData(:,4),'-g.');
+    plot(Voltage(1:end-1,1), FinalData(:,i),'-bo',linewidth,'2');
     axis tight;
-%     switch(i)
-%         case 1
-%             title(" Lorentz Fit Data for 2D PEAK", plot_datafile);
-%         case 2
-%             title(" Lorentz Fit Data for G PEAK " , plot_datafile);
+	title('',v_title(i),'');
+	
+  figure
+    plot(Voltage(1:end-1,1), FinalData(:,i+1),'-gs',linewidth,'2');
+	axis tight;
+	title('',v_title(i+1),'');
+
+  figure
+    plot(Voltage(1:end-1,1),FinalData(:,i+2),'-md',linewidth,'2');
+    axis tight;
+	title('',v_title(i+2),'');
+    % if i==1
+
+            % title(" Lorentz Fit Data for 2D PEAK");
+       % else 
+
+            % title(" Lorentz Fit Data for G PEAK ");
+	% end
+end
